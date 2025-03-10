@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started for FREE!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 800px;
+      }
+      .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+      }
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 5px 10px;
+        border: 1px solid black;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+        margin: 5px;
+      }
+      .close:hover {
+        background-color: #0056b3;
+      }
+      .content {
+        display: flex;
+        flex: 1;
+      }
+      .left-side {
+        padding: 20px;
+        width: 50%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 2px dotted #ccc; /* Dotted line between left and right */
+      }
+      .right-side {
+        background-color: #f9f9f9;
+        padding: 10px 20px; /* Adjusted padding */
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+      }
+      .input-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .input-group label {
+        font-size: 14px;
+        color: #333;
+        width: 120px;
+        margin-right: 10px;
+        font-weight: bold;
+      }
+      .input-group input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+      .input-group input:focus {
+        outline: 2px solid #007bff;
+      }
+      button {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      .terms {
+        font-size: 12px;
+        color: #666;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .bottom-section {
+        border-top: 2px dotted #ccc; /* Dotted line above the button */
+        border-bottom: 2px dotted #ccc; /* Dotted line below the button */
+        padding: 15px 0;
+        text-align: center;
+      }
+      .right-side h2 {
+        font-size: 20px;
+        margin: 0; /* Removed unnecessary margin */
+        padding: 5px 0;
+        color: #333;
+        display: flex;
+        align-items: center;
+      }
+      .right-side p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #666;
+        margin: 0; /* Removed unnecessary margin */
+        padding-bottom: 10px;
+      }
+      .icon {
+        color: #28a745;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        Get Started for FREE!
+        <div class="close">CLOSE</div>
+      </div>
+      <div class="content">
+        <div class="left-side">
+          <div>
+            <div class="input-group">
+              <label>Your name</label>
+              <input type="text" />
+            </div>
+            <div class="input-group">
+              <label>Company name</label>
+              <input type="text" />
+            </div>
+            <div class="input-group">
+              <label>Company size</label>
+              <input type="number" placeholder="Choose one" min="1" />
+            </div>
+            <div class="input-group">
+              <label>Business model</label>
+              <input type="number" placeholder="Choose one" min="1" />
+            </div>
+            <div class="input-group">
+              <label>Company website</label>
+              <input type="text" />
+            </div>
+            <div class="input-group">
+              <label>Telephone number</label>
+              <input type="text" />
+            </div>
+            <div class="input-group">
+              <label>Email address</label>
+              <input type="email" />
+            </div>
+            <div class="input-group">
+              <label>Password</label>
+              <input type="password" />
+            </div>
+          </div>
+          <div class="bottom-section">
+            <button>START YOUR FREE TRIAL NOW</button>
+            <div class="terms">
+              By clicking this button, you agree with our Terms.
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <i class="fas fa-users icon"></i>
+          <h2>We help you get to know your people.</h2>
+          <p>
+            The lifeblood of your business is the people that interact with you
+            and even pay you...your users...your customers.
+          </p>
+          <h2>
+            <i class="fas fa-check icon"></i>A complex business service, built &
+            designed simply.
+          </h2>
+          <p>
+            You are trying to acquire, activate, retain and delight your
+            customers every single minute of every day.
+          </p>
+          <h2>
+            <i class="fas fa-user icon"></i>People not pageviews, goodbye vanity
+            metrics.
+          </h2>
+          <p>
+            No longer will you just view a percentage of people coming and
+            going, we’ll tell you who’s coming, viewing what and why.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS- COMBINATOR</title>
+    <style>
+      /* Descendant Combinator (space)
+        Child Combinator (>)
+        Next Sibling Combinator (+)
+        Subsequent-sibling Combinator (~) */
+
+      /* Descendant Combinator (space) */
+      /*.div1 p
+        {
+            color: red;
+        }*/
+
+      /* child combinator (>) */
+      /* .div1 > p
+        {
+        color : red;
+        } */
+
+      /* Next Sibling Combinator (+) */
+      /* .div1 +p
+        {
+        color: red;
+        }*/
+
+      /* Subsequent-sibling Combinaotor (~) */
+      .div1 ~ p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <p>Paragraph 1</p>
+      <span><p>Paragraph 2</p></span>
+      <p>Paragraph</p>
+    </div>
+    <h3>CSS COMBINATOR</h3>
+    <p>Paragraph 4- outside of the container</p>
+    <p>Paragraph 5- outside of the container</p>
+  </body>
+</html>

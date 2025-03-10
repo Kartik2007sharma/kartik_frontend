@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.sidebar .news {
+  margin-top: 20px;
+}
+
+.sidebar .news h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.sidebar .news-item {
+  margin-bottom: 15px;
+}
+
+.sidebar .news-item h4 {
+  margin: 0;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.content header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content header h1 {
+  margin: 0;
+}
+
+.content header .header-images img {
+  max-width: 48%;
+  margin: 5px;
+}
+
+.content .main-text {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.content .portfolio {
+  background-color: white;
+  padding: 20px;
+}
+
+.content .portfolio h2 {
+  margin-top: 0;
+}
+
+.content .portfolio .portfolio-images img {
+  max-width: 24%;
+  margin: 5px;
+}
+
+.content .portfolio .portfolio-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.projects {
+  width: 200px;
+  background-color: #eee;
+  padding: 20px;
+}
+
+.projects h2 {
+  margin-top: 0;
+}
+
+.projects .project-images img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.projects .project-link {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.projects .tweet {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.projects .social-links {
+  text-align: center;
+}
+
+.projects .social-links .twitter-link {
+  display: block;
+  margin-bottom: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.projects .social-links .social-icons a {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+  text-decoration: none;
+  border-radius: 50%;
+}

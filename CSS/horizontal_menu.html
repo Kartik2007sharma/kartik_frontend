@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      .menu {
+        width: 100%;
+        background-color: lightgrey;
+        float: left;
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+      .mainMenu {
+        /*list-style-position: inside;*/
+        list-style-type: none;
+      }
+      .mainMenu li {
+        float: left;
+      }
+      .mainMenu li a {
+        text-decoration: none;
+        color: black;
+        padding: 15px 20px;
+        display: block;
+      }
+      .mainMenu li a:hover {
+        background-color: black;
+        color: white;
+      }
+      /*add nested list in all the buttons*/
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <ul class="mainMenu">
+        <li><a href="#">Home</a></li>
+
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

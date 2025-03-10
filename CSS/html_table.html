@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tableContainer {
+        width: 60%;
+        border: 1px solid black;
+        box-sizing: border-box;
+        float: left;
+        overflow: auto;
+      }
+      .tbl {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .tbl td,
+      .tbl th {
+        border-bottom: 1 px solid black;
+        padding: 10px 0px;
+      }
+      .tbl td {
+        text-align: center;
+      }
+      .tbl th {
+        background-color: black;
+        color: white;
+      }
+      .tbl tr:nth-child(even) {
+        background-color: lightgrey;
+      }
+      .tbl tr:hover {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tableContainer">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile No</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>john12@gmail.com</td>
+            <td>1234567890</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>John</td>
+            <td>john12@gmail.com</td>
+            <td>1234567890</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

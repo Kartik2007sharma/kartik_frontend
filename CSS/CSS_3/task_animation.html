@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        width: 10%;
+        height: 100px;
+        background-color: red;
+        animation-name: animation1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        position: relative;
+      }
+      @keyframes animation1 {
+        0% {
+          left: 0%;
+          top: 0px;
+        }
+        25% {
+          left: 50%;
+          top: 0px;
+        }
+        50% {
+          left: 50%;
+          top: 300px;
+        }
+        75% {
+          left: 0%;
+          top: 300px;
+        }
+        100% {
+          left: 0%;
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1"></div>
+  </body>
+</html>

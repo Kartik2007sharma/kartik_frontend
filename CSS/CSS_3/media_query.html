@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* <576 --- xs device (mobile)
+        >=576 --- sm device(big phone)
+        >=768 --- md device(tab)
+        >=992 --- lg device(desktop)
+        >=1200 --- xl device(tv) */
+      body {
+        background-color: lightcyan;
+      }
+      @media screen and (max-width: 1200px) {
+        body {
+          background-color: lightskyblue;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        body {
+          background-color: lightgoldenrodyellow;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        body {
+          background-color: lightgrey;
+        }
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .container1 {
+        width: 20%;
+        height: 100px;
+        background-color: olive;
+        float: left;
+        margin: 0px 1% 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1">Container1</div>
+    <div class="container1">Container2</div>
+    <div class="container1">Container3</div>
+    <div class="container1">Container4</div>
+    <div class="container1">Container5</div>
+  </body>
+</html>

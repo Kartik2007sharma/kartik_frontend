@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        width: 800px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .header {
+        background: #15729b;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .close-btn {
+        background: #004b6b;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        cursor: pointer;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+      .content {
+        display: flex;
+        padding: 20px;
+      }
+      .form-box {
+        width: 60%;
+        padding-right: 20px;
+      }
+      .info-box {
+        width: 40%;
+        background: #f9f9f9;
+        padding: 20px;
+        border-left: 1px solid #ddd;
+      }
+      form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+      }
+      form input,
+      form select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      .submit-btn {
+        background: #0275d8;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-top: 10px;
+        font-size: 16px;
+      }
+      .terms {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .info-box h3 {
+        color: #5cb85c;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .info-box h3::before {
+        content: "\2713";
+        font-size: 20px;
+        color: #5cb85c;
+        margin-right: 10px;
+      }
+      .info-box p {
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <span>Get Started for FREE!</span>
+        <button class="close-btn">CLOSE</button>
+      </div>
+      <div class="content">
+        <div class="form-box">
+          <form>
+            <label>Your name:</label>
+            <input type="text" required />
+
+            <label>Company name:</label>
+            <input type="text" required />
+
+            <label>Company size:</label>
+            <select>
+              <option>Choose one...</option>
+            </select>
+
+            <label>Business model:</label>
+            <select>
+              <option>Choose one...</option>
+            </select>
+
+            <label>Company website:</label>
+            <input type="url" />
+
+            <label>Telephone number:</label>
+            <input type="tel" />
+
+            <label>Email address:</label>
+            <input type="email" required />
+
+            <label>Password:</label>
+            <input type="password" required />
+
+            <button class="submit-btn">START YOUR FREE TRIAL NOW</button>
+          </form>
+          <p class="terms">
+            By clicking this button, you agree with our <a href="#">Terms</a>.
+          </p>
+        </div>
+        <div class="info-box">
+          <div class="info">
+            <h3>We help you get to know your people.</h3>
+            <p>
+              The lifeblood of your business is the people that interact with
+              you and even pay you...your users...your customers.
+            </p>
+          </div>
+          <div class="info">
+            <h3>A complex business service, built & designed simply.</h3>
+            <p>
+              You are trying to acquire, activate, retain and delight your
+              customers every single minute of every day.
+            </p>
+          </div>
+          <div class="info">
+            <h3>People not pageviews, goodbye vanity metrics.</h3>
+            <p>
+              No longer will you just view a percentage of people coming and
+              going, we’ll tell you who’s coming, viewing what and why.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

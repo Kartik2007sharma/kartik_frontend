@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decor Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body {
+        /* overflow-y: auto; */
+        height: auto; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2d572c;
+}
+
+      body {
+        font-size:smaller;
+        background-color: #2d572c;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+      .sidebar {
+    color: #2d572c; 
+}
+
+.sidebar a {
+    color: #2d572c; 
+}
+
+.sidebar h1,
+.sidebar h2,
+.sidebar p,
+.sidebar li {
+    color: #2d572c; 
+}
+      .container {
+        height: 90vh;
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding-bottom: 20px;
+        gap: 20px;
+        overflow: auto;
+      }
+
+      .sidebar,
+      .projects {
+        width: 25%;
+        height: 100%;
+        
+      }
+
+      .middle-wrapper {
+        flex: 1;
+        min-width: 400px;
+        height: 100%;
+        /* overflow: auto; */
+        
+      }
+      .sidebar, .middle-wrapper, .projects {
+        flex-shrink: 0;  /* Prevents unexpected shrinking */
+        min-width: 250px; /* Ensures a minimum width */
+}
+
+      .middle-container {
+        min-height: 100%;
+        width: 100%;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
+      .middle-container h2 {
+    position: relative;
+    padding-bottom: 10px; 
+    border-bottom: 2px dotted #2d572c;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+
+      .sidebar,
+      .middle-container,
+      .projects {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        max-height: 90vh;
+        /* overflow: auto; */
+      }
+
+      .middle-container, .sidebar, .projects {
+    padding: 2px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+      .sidebar > *, 
+.projects > *, 
+.middle-container > * {
+    flex-grow: 1; 
+    /* overflow: auto;  */
+}
+.dotted-line {
+    width: 100%; 
+    border-bottom: 2px dotted #2d572c; 
+    margin-top: 10px; 
+}
+img {
+    max-width: 100%; /* Prevents image from exceeding its container */
+    max-height: 100%; /* Keeps images proportional */
+    height: auto; /* Maintains aspect ratio */
+    width: auto; /* Adjusts dynamically */
+    object-fit: contain; /* Ensures the full image is visible within the container */
+    display: block; /* Removes extra spacing below images */
+}
+
+      .logo {
+        font-size: 24px;
+        color: #2d572c;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted #2d572c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+      }
+      .logo img {
+    width: 50px; 
+    height: auto;
+}
+      nav ul {
+        list-style: disc;
+        padding-left: 20px;
+      }
+
+      nav ul li {
+        padding: 5px 0;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #2d572c;
+      }
+
+      .news {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .news p strong {
+    display: block;
+    margin-top: 15px; 
+}
+
+      button {
+        background:blue;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 5px;
+      }
+      h1 {
+    font-size: 20px; 
+    color: #2d572c;
+
+}
+      h2 {
+        font-size: 20px;
+        color: #2d572c;
+      }
+      h3 {
+    font-size: 20px; 
+    color: #2d572c;
+
+}
+      .featured img, .portfolio img, .three_images img, .projects img {
+        max-height: 150px;
+        object-fit: cover;
+}
+
+      .featured {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+      }
+
+      .featured img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .portfolio {
+        padding: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .portfolio img {
+        width: 100%;
+        max-width: 250px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .portfolio-content {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .three_images {
+        display: flex;
+        gap: 10px;
+        margin-top: auto;
+        padding: 2.5px;
+       
+      }
+
+      .three_images img {
+
+        /* flex: 1; */
+        object-fit: cover;
+        height: 100px;
+        border-radius: 5px;
+        width: 90px;
+        border-radius: 5px;
+        padding: 5px; 
+        border: 2px dotted #2d572c; 
+        display: block;
+        background-color: white; 
+      }
+      
+
+      .portfolio button {
+        width: 100%;
+        background: greenyellow;
+        color: white;
+        border: none;
+        padding: 15px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 20px;
+        align-self: center;
+      }
+.projects h2 {
+    position: relative;
+    padding-bottom: 10px; }
+
+.projects h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 2px dotted #2d572c;
+    margin-top: 10px; 
+}
+.projects h2:nth-of-type(2) {
+    border-top: 2px dotted #2d572c;
+    padding-top: 10px;
+    margin-top: 10px; 
+}
+      .projects img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+       
+      }
+      .social-icons {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+      .social-icons img {
+        width: 30px;
+        height:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h1 class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Company Icon" class="logo-icon">
+            My Company Logo
+        </h1>
+        <nav>
+            <ul>
+              <li><a href="#">Full Page</a></li>
+              <li><a href="#" style="color: blue;">Home</a></li>
+              <li><a href="#">Some Elements</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Tables and Lists</a></li>
+              <li><a href="#">Contact Us & Map</a></li>
+              <li><a href="#">Contact Us Full</a></li>
+            </ul>
+            <div class="dotted-line"></div>
+          </nav>
+          
+          
+        <section class="news">
+          <h2>@news</h2>
+          <p>
+            <strong style="color: blue;">Lorem Ipsum!</strong>
+            <p><span style="color: blue;">Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Maiores maxime in vero nihil esse nisi? Maxime
+                deserunt sint dolore accusantium laboriosam rem facere facilis at,
+                omnis, fugiat ipsam itaque eos.</span></p>
+          </p>
+          
+          <p>
+            <strong style="color: blue;">Lorem Ipsum!</strong>
+            <p><span style="color: blue;">Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Maiores maxime in vero nihil esse nisi? Maxime
+                deserunt sint dolore accusantium laboriosam rem facere facilis at,
+                omnis, fugiat ipsam itaque eos.</span></p>
+          </p>
+          <button>Click to see more...</button>
+        </section>
+      </aside>
+      <div class="middle-wrapper">
+        <main class="middle-container">
+          <h2>The Decor of Your Dreams</h2>
+          <div class="featured">
+            <img
+              src="../../Images/istockphoto-1190440285-612x612.jpg"
+              alt="Decor Image"
+            />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit
+              iste minima quos, omnis voluptatum similique architecto molestiae
+              tempora. Quam mollitia officia provident, quis necessitatibus
+              dolorem quo libero velit non error.
+              <a href="#">more...</a>
+            
+            </p>
+            <div class="dotted-line"></div> 
+          </div>
+          <div class="portfolio">
+            <img
+              src="../../Images/pexels-alex-qian-1180283-2343468.jpg"
+              alt="Decor Portfolio"
+            />
+            <div class="portfolio-content">
+              <h3>Lorem ipsum dolor sit amet!</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Blanditiis voluptatibus provident impedit ut. Eius, asperiores
+                molestias! Reprehenderit, consequuntur? Necessitatibus molestias
+                nesciunt omnis! Repudiandae, minima neque fuga commodi delectus
+                molestiae iusto! <a href="#">more...</a>
+              </p>
+              <div class="three_images">
+                <img src="../../Images/sofa.jpg" alt="Thumb 1" />
+                <img src="../../Images/chair.jpg" alt="Thumb 2" />
+                <img src="../../Images/tv.jpg" alt="Thumb 3" />
+              </div>
+            </div>
+          </div>
+          <button class="portfolio-btn">
+            Click and check out our portfolio
+          </button>
+        </main>
+      </div>
+      <aside class="projects">
+        <h2>Projects</h2>
+        <img src="../../Images/int_des1.jpg" alt="Project 1" />
+        <img src="../../Images/int_des2.jpg" alt="Project 2" />
+        <button>Click to see more...</button>
+        <h2>last tweet</h2>
+        <p>When you're courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. Thats realtively...</p>
+        <p><span style="color: skyblue;">20 hours ago</span></p>
+        <button>Follow us on Twitter</button>
+        <div class="social-icons">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" width="30"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="Twitter" width="30"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124011.png" alt="LinkedIn" width="30"></a>
+          </div>
+          
+      </aside>
+    </div>
+  </body>
+</html>
