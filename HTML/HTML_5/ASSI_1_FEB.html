@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f3e5f5; /* Light purple background */
+        color: #4a148c; /* Dark purple text */
+      }
+      form {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #ffffff; /* White background for the form */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        color: #6a1b9a; /* Medium purple for labels */
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ab47bc; /* Purple border */
+        border-radius: 5px;
+        background-color: #f3e5f5; /* Light purple background for inputs */
+        color: #4a148c; /* Dark purple text */
+      }
+      .inline {
+        display: inline-block;
+        width: auto;
+      }
+      .submit-reset {
+        margin-top: 20px;
+        text-align: center;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #9c27b0; /* Purple background for buttons */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #7b1fa2; /* Darker purple on hover */
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ab47bc; /* Purple border for table */
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #9c27b0; /* Purple background for table headers */
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center; color: #6a1b9a">
+      STUDENT REGISTRATION FORM
+    </h2>
+
+    <form>
+      <label for="firstName">FIRST NAME</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        maxlength="30"
+        pattern="[A-Za-z]+"
+        required
+      />
+
+      <label for="lastName">LAST NAME</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        maxlength="30"
+        pattern="[A-Za-z]+"
+        required
+      />
+
+      <label for="dob">DATE OF BIRTH</label>
+      <div>
+        <input
+          type="number"
+          id="day"
+          name="day"
+          placeholder="Day"
+          min="1"
+          max="31"
+          required
+          class="inline"
+        />
+        <select id="month" name="month" required class="inline">
+          <option value="">Month</option>
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <input
+          type="number"
+          id="year"
+          name="year"
+          placeholder="Year"
+          min="1900"
+          max="2023"
+          required
+          class="inline"
+        />
+      </div>
+
+      <label for="email">EMAIL ID</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mobile">MOBILE NUMBER</label>
+      <input
+        type="tel"
+        id="mobile"
+        name="mobile"
+        pattern="[0-9]{10}"
+        required
+      />
+
+      <label>GENDER</label>
+      <div>
+        <input type="radio" id="male" name="gender" value="Male" required />
+        <label for="male" class="inline">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required />
+        <label for="female" class="inline">Female</label>
+      </div>
+
+      <label for="address">ADDRESS</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <label for="city">CITY</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        maxlength="30"
+        pattern="[A-Za-z]+"
+        required
+      />
+
+      <label for="pincode">PIN CODE</label>
+      <input
+        type="text"
+        id="pincode"
+        name="pincode"
+        pattern="[0-9]{6}"
+        required
+      />
+
+      <label for="state">STATE</label>
+      <input
+        type="text"
+        id="state"
+        name="state"
+        maxlength="30"
+        pattern="[A-Za-z]+"
+        required
+      />
+
+      <label for="country">COUNTRY</label>
+      <input type="text" id="country" name="country" value="India" readonly />
+
+      <label>HOBBIES</label>
+      <div>
+        <input type="checkbox" id="drawing" name="hobbies" value="Drawing" />
+        <label for="drawing" class="inline">Drawing</label>
+        <input type="checkbox" id="singing" name="hobbies" value="Singing" />
+        <label for="singing" class="inline">Singing</label>
+        <input type="checkbox" id="dancing" name="hobbies" value="Dancing" />
+        <label for="dancing" class="inline">Dancing</label>
+        <input
+          type="checkbox"
+          id="sketching"
+          name="hobbies"
+          value="Sketching"
+        />
+        <label for="sketching" class="inline">Sketching</label>
+        <input type="checkbox" id="others" name="hobbies" value="Others" />
+        <label for="others" class="inline">Others</label>
+      </div>
+
+      <label>QUALIFICATION</label>
+      <table>
+        <tr>
+          <th>SLNo.</th>
+          <th>Examination</th>
+          <th>Board</th>
+          <th>Percentage</th>
+          <th>Year of Passing</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Class X</td>
+          <td><input type="text" name="board1" maxlength="10" /></td>
+          <td><input type="number" name="percentage1" step="0.01" /></td>
+          <td><input type="number" name="year1" /></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Class XII</td>
+          <td><input type="text" name="board2" maxlength="10" /></td>
+          <td><input type="number" name="percentage2" step="0.01" /></td>
+          <td><input type="number" name="year2" /></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Graduation</td>
+          <td><input type="text" name="board3" maxlength="10" /></td>
+          <td><input type="number" name="percentage3" step="0.01" /></td>
+          <td><input type="number" name="year3" /></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Masters</td>
+          <td><input type="text" name="board4" maxlength="10" /></td>
+          <td><input type="number" name="percentage4" step="0.01" /></td>
+          <td><input type="number" name="year4" /></td>
+        </tr>
+      </table>
+
+      <label>COURSES APPLIED FOR</label>
+      <div>
+        <input type="checkbox" id="bca" name="courses" value="BCA" />
+        <label for="bca" class="inline">BCA</label>
+        <input type="checkbox" id="bcom" name="courses" value="B.Com" />
+        <label for="bcom" class="inline">B.Com</label>
+        <input type="checkbox" id="bsc" name="courses" value="B.Sc" />
+        <label for="bsc" class="inline">B.Sc</label>
+        <input type="checkbox" id="ba" name="courses" value="B.A" />
+        <label for="ba" class="inline">B.A</label>
+      </div>
+
+      <div class="submit-reset">
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+  </body>
+</html>
